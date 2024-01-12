@@ -1,0 +1,23 @@
+{
+  "name": "cruder",
+  "version": "1.0.0",
+  "description": "This package will help in crud functionality of a resource",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jahid-CodeClouds/package-cruder.git"
+  },
+  "keywords": [
+    "crud",
+    "cruder"
+  ],
+  "author": "Sheikh Jahid Moula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jahid-CodeClouds/package-cruder/issues"
+  },
+  "homepage": "https://github.com/Jahid-CodeClouds/package-cruder#readme"
+}
