@@ -1,5 +1,5 @@
 {
-  "name": "cruder",
+  "name": "mongo-cruder",
   "version": "1.0.0",
   "description": "This package will help in crud functionality of a resource",
   "main": "index.js",
