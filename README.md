@@ -2,13 +2,13 @@
 
 # Installation
 
-## Run command in your related project directory: npm i mongo-cruder
+#### Run command in your related project directory: npm i mongo-cruder
 
 # Configuration
 
-## Step 1: Take your MongoURI with database name appended
+#### Step 1: Take your MongoURI with database name appended
 
-## Step 2: Connect to your MongoDB
+#### Step 2: Connect to your MongoDB
 
 ```Javascript
 const Connect = require("mongo-cruder");
@@ -57,8 +57,8 @@ const deleteMany = async () => {
 
 # Conclusion
 
-## Thats it!! Its pretty simple and easy to use. Enjoy
+#### Thats it!! Its pretty simple and easy to use. Enjoy
 
 # Note
 
-## There will also be some great updates on this package so stay tuned. Cheers!!
+#### There will also be some great updates on this package so stay tuned. Cheers!!
