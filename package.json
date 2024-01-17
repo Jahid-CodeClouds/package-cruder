@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Jahid-CodeClouds/package-cruder/issues"
   },
-  "homepage": "https://github.com/Jahid-CodeClouds/package-cruder#readme"
+  "homepage": "https://github.com/Jahid-CodeClouds/package-cruder#readme",
+  "dependencies": {
+    "mongoose": "^8.0.4",
+    "mysql": "^2.18.1"
+  }
 }
