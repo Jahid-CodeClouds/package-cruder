@@ -23,7 +23,7 @@ class CRUD {
     return await this.connection.db.collection(resource).insertMany(payload);
   }
 
-  async updateOne(resource, payload, filters = {}, options = {}) {
+  async updateOne(resource, filters = {}, payload, options = {}) {
     return await this.connection.db.collection(resource).updateOne(
       filters,
       {
@@ -33,7 +33,7 @@ class CRUD {
     );
   }
 
-  async updateMany(resource, payload, filters = {}, options = {}) {
+  async updateMany(resource, filters = {}, payload, options = {}) {
     return await this.connection.db.collection(resource).updateMany(
       filters,
       {
