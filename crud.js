@@ -20,7 +20,7 @@ class CRUD {
   }
 
   async createMany(resource, payload) {
-      await this.connection.db.collection(resource).insertMany(payload);
+    return await this.connection.db.collection(resource).insertMany(payload);
   }
 
   async updateOne(resource, filters = {}, payload, options = {}) {
