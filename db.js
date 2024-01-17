@@ -35,10 +35,10 @@ class Connect {
         response = await cruder.createMany(resource, payload);
         break;
       case "updateOne":
-        response = await cruder.updateOne(resource, payload, filters, options);
+        response = await cruder.updateOne(resource, filters, payload, options);
         break;
       case "updateMany":
-        response = await cruder.updateMany(resource, payload, filters, options);
+        response = await cruder.updateMany(resource, filters, payload, options);
         break;
       case "removeOne":
         response = await cruder.removeOne(resource, filters);
