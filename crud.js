@@ -12,49 +12,43 @@ class CRUD {
   }
 
   async find(resource, filters = {}) {
-    return await this.connection.db
-      .collection(resource)
-      .findOne(filters);
+    return await this.connection.db.collection(resource).findOne(filters);
   }
 
   async create(resource, payload) {
-    return await this.connection.db
-      .collection(resource)
-      .insertOne(payload);
+    return await this.connection.db.collection(resource).insertOne(payload);
   }
 
   async createMany(resource, payload) {
-    return await this.connection.db
-      .collection(resource)
-      .insertMany(payload);
+    return await this.connection.db.collection(resource).insertMany(payload);
   }
 
-  async updateOne(resource, filters = {}, payload, options ={}) {
-    return await this.connection.db
-      .collection(resource)
-      .updateOne(filters, {
-        $set: payload
-      }, options);
+  async updateOne(resource, filters = {}, payload, options = {}) {
+    return await this.connection.db.collection(resource).updateOne(
+      filters,
+      {
+        $set: payload,
+      },
+      options
+    );
   }
 
   async updateMany(resource, filters = {}, payload, options = {}) {
-    return await this.connection.db
-      .collection(resource)
-      .updateMany(filters, {
-        $set: payload
-      }, options);
+    return await this.connection.db.collection(resource).updateMany(
+      filters,
+      {
+        $set: payload,
+      },
+      options
+    );
   }
 
   async removeOne(resource, filters = {}) {
-    return await this.connection.db
-      .collection(resource)
-      .deleteOne(filters);
+    return await this.connection.db.collection(resource).deleteOne(filters);
   }
 
   async removeMany(resource, filters = {}) {
-    return await this.connection.db
-      .collection(resource)
-      .deleteMany(filters);
+    return await this.connection.db.collection(resource).deleteMany(filters);
   }
 }
 
