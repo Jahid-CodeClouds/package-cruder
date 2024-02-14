@@ -101,8 +101,4 @@ const remove = async () => {
 
 # Conclusion
 
-#### Thats it!! Its pretty simple and easy to use. Enjoy
-
-# Note
-
-#### There will also be some great updates on this package so stay tuned. Cheers!!
+#### Thats it!! Its pretty simple and easy to use. Enjoy!
