@@ -1,6 +1,6 @@
 {
   "name": "mongo-sql-cruder",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "This package will help in crud functionality of a resource with MongoDB / MySQL connection",
   "main": "index.js",
   "scripts": {
