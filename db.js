@@ -1,11 +1,65 @@
 const mongoose = require("mongoose");
-const CRUD = require("./crud");
+const mysql = require("mysql");
+const MongoCruder = require("./mongo-cruder");
+const MySqlCruder = require("./mysql-cruder");
 
 class Connect {
   config = null;
+  resultData = null;
   constructor(config) {
     this.config = config;
   }
+
+  resultData = (result) => {
+    return JSON.parse(JSON.stringify(result));
+  };
+
+  mySqlCrud = async (
+    type,
+    resource,
+    filterOptions = {},
+    payload = {},
+    sortOptions = { id: "ASC" },
+  ) => {
+    let connection = await mysql.createConnection(this.config);
+    connection.connect((err) => {
+      if (err) throw err;
+    });
+
+    var response = null;
+    switch (type) {
+      case "list":
+        response = await new MySqlCruder(connection).list(
+          resource,
+          sortOptions
+        );
+        break;
+      case "find":
+        response = await new MySqlCruder(connection).find(
+          resource,
+          filterOptions,
+          sortOptions
+        );
+        break;
+      case "create":
+        response = new MySqlCruder(connection).create(resource, payload);
+        break;
+      case "update":
+        response = new MySqlCruder(connection).update(
+          resource,
+          filterOptions,
+          payload
+        );
+        break;
+      case "delete":
+        response = new MySqlCruder(connection).delete(resource, filterOptions);
+        break;
+      default:
+        response = "Invalid type";
+    }
+
+    return response;
+  };
 
   mongoCRUD = async (
     type,
@@ -16,10 +70,12 @@ class Connect {
   ) => {
     let mongooseConnection = await mongoose
       .connect(this.config)
-      .catch((err) => console.log("Connection error: " + err));
+      .catch((err) => {
+        throw "Connection error: " + err;
+      });
 
-    const cruder = new CRUD(mongooseConnection.connection);
-    
+    const cruder = new MongoCruder(mongooseConnection.connection);
+
     let response = null;
     switch (type) {
       case "list":

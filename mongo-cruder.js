@@ -1,4 +1,4 @@
-class CRUD {
+class MongoCruder {
   connection = null;
   constructor(connection) {
     this.connection = connection;
@@ -52,4 +52,4 @@ class CRUD {
   }
 }
 
-module.exports = CRUD;
+module.exports = MongoCruder;
