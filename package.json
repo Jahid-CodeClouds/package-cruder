@@ -1,7 +1,7 @@
 {
-  "name": "mongo-cruder",
+  "name": "mongo-sql-cruder",
   "version": "1.0.3",
-  "description": "This package will help in crud functionality of a resource",
+  "description": "This package will help in crud functionality of a resource with MongoDB / MySQL connection",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
