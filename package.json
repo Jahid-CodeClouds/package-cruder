@@ -11,8 +11,15 @@
     "url": "https://github.com/Jahid-CodeClouds/package-cruder.git"
   },
   "keywords": [
+    "cruder",
+    "sql cruder",
     "mongo cruder",
-    "mongo-cruder"
+    "sql-cruder",
+    "mongo-cruder",
+    "sql mongo cruder",
+    "mongo sql cruder",
+    "mongo-sql-cruder",
+    "sql-mongo-cruder"
   ],
   "author": "Sheikh Jahid Moula",
   "license": "ISC",
